@@ -1,0 +1,383 @@
+/*============Popup==========*/
+.popup {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top:0px;
+	display: none;
+	overflow: auto;
+	left:0px;
+	background: rgba(0,0,0,0.5);
+	padding-bottom: 30px;
+	z-index: 1000;
+	 &__box {
+		background-color: $wh; 
+		padding: 24px;
+		position: relative;
+	}
+	&.show {
+		visibility: visible;
+		opacity: 1;
+		transition: all 1.7s linear;
+	}
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		right: 24px;
+		top: 24px;
+		z-index: 1000;
+		.close-icon {
+			width: 15px;
+			height: 15px;
+			fill: $gray;
+			transition: all .2s linear;
+		}
+		&:hover {
+			.close-icon {
+				fill: $red;
+			}
+		}
+	}
+	&__inner {
+		opacity: 1;
+		width: 95%;
+		max-width: 680px;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		position: absolute;
+		display: none;
+		z-index: 2000;
+ 	}
+	.closex {
+		content:"";
+		top:0px;
+		left:0px;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+ 		z-index: 2000;
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 28px;
+		font-weight: 600;
+		color: $bl;
+		line-height: $lh;
+		text-align: center;
+		margin-bottom: 24px;
+	}
+}
+/*========/popup============*/
+
+/*============Popup-size==========*/
+.popup-size {
+	&__inner {
+		max-width: 600px;
+ 	}
+}
+/*========/popup-size============*/
+
+/*======Size-table========*/
+.size-table {
+	&-mobile {
+		display: none;
+	}
+	&__row {
+		display: flex;
+		border-bottom: 1px solid $lgray;
+	}
+	&__header {
+		background-color: $gray2;
+		.size-table__info {
+			&:first-child {
+				font-weight: 600;
+			}
+		}
+	}
+	&__item {
+		width: 20%;
+		padding: 15px 8px;
+		border-top: 1px solid $lgray;
+		border-right: 1px solid $lgray;
+		text-align: center;
+		&:first-child {
+			border-left: 1px solid $lgray;
+			background-color: $gray2;
+			text-align: left;
+		}
+	}
+	&__info {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		span {
+			display: block;
+		}
+	}
+}
+/*======/size-table========*/
+
+/*============Popup-buy==========*/
+.popup-buy {
+	&__inner {
+		max-width: 680px;
+ 	}
+	&__block {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	&__name {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		padding: 9px 17px;
+		background-color: $gray2;
+		border: 1px solid $gray;
+		margin-right: 30px;
+		width: 125px;
+		text-align: center;
+	}
+	&__price {
+		margin-right: 30px;
+		.product-price {
+			flex-direction: column;
+			&__actual {
+				font-size: 16px;
+			}
+			&__past {
+				font-size: 12px;
+			}
+			span {
+				margin-right: 0;
+				white-space: nowrap;
+			}
+		}
+	}
+	&__count {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		text-align: center;
+		margin-right: 30px;
+		span {
+			display: block;
+		}
+	}
+	&__quantity {
+		margin-right: 30px;
+		display: flex;
+		.product-quantity {
+			padding: 10px 13px;
+			border: 1px solid $red;
+		}
+	}
+	&__btn-buy {
+		display: inline-flex;
+		align-items: center;
+		padding: 7px 15px;
+		background-color: $red;
+		transition: all .2s linear;
+		span {
+			display: inline-block;
+			margin-right: 8px;
+			font-family: $ff;
+			font-size: 11px;
+			font-weight: 400;
+			color: $wh;
+		}
+		&:hover {
+			background-color: $dred;
+		}
+	}
+}
+/*========/popup-buy============*/
+
+/*============Popup-login==========*/
+.popup-login {
+	&__inner {
+		max-width: 414px;
+ 	}
+ 	&__box {
+ 		padding: 24px 40px;
+ 	}
+ 	&__close {
+ 		top: 15px;
+ 		right: 15px;
+ 	}
+ 	.login-form__item {
+ 		margin-bottom: 12px;
+ 		&:last-child {
+ 			margin-bottom: 0;
+ 		}
+ 	}
+ 	.login-form__description {
+ 		margin: 0 auto 24px;
+ 		max-width: 265px;
+ 	}
+ 	.login-form__noaccnt {
+ 		flex-direction: column;
+ 		span {
+ 			margin-right: 0;
+ 			margin-bottom: 10px;
+ 		}
+ 	}
+ 	.btn {
+ 		width: 100%;
+ 		margin-bottom: 12px;
+ 		&-transparent {
+ 			width: 100%;
+ 		}
+ 	}
+}
+/*========/popup-login============*/
+
+
+/*========Adaptive========*/
+@media(max-width: 767px) {
+	.popup {
+		&__close {
+			top: 15px;
+			right: 15px;
+		}
+		&__box {
+			padding: 24px 10px;
+		}
+		&__title {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+	.popup-size  {
+		&__inner {
+			width: 100%;
+			max-width: 100%;
+			top: 0;
+			transform: translate3d(-50%, 0, 0);
+			padding-bottom: 0;
+		}
+		&__box {
+			min-height: 100vh;
+		}
+		&__title {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+	.size-table {
+		display: none;
+	}
+	.size-table-mobile {
+		display: block;
+		&__block {
+			border-bottom: 1px solid $lgray;
+			padding: 20px 0;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		&__title {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 600;
+			color: $bl;
+			line-height: $lh;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		&__item {
+			display: flex;
+			max-width: 180px;
+			margin: 0 auto 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__name {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $bl;
+			line-height: $lh;
+			width: 50%;
+			margin-right: 20px;
+		}
+		&__data {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $bl;
+			line-height: $lh;
+			width: 50%;
+		}
+	}
+	.popup-buy {
+		&__block {
+			display: block;
+			max-width: 320px;
+			margin: 0 auto 20px;
+		}
+		&__item {
+			margin-bottom: 10px;
+			&:first-child {
+				justify-content: space-between;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__count {
+			margin-right: 0;
+		}
+		&__quantity {
+			margin-right: 10px;
+		}
+		&__order {
+			flex: 1 1 auto;
+		}
+	}
+	.popup-login {
+		.title {
+			margin: 10px;
+		}
+	 	&__box {
+	 		padding: 24px 10px;
+	 	}
+	 	.login-form__description {
+	 		margin: 0 auto 20px;
+	 	}
+	}
+}
+@media(max-width: 360px) {
+	.popup-buy  {
+		&__inner {
+			top: 10px;
+			padding-bottom: 10px;
+			transform: translate3d(-50%, 0, 0);
+		}
+		&__name {
+			font-size: 14px;
+		}
+		.btn-transparent {
+			font-size: 12px;
+		}
+	}
+}
+/*========/adaptive========*/

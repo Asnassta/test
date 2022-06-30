@@ -1,0 +1,355 @@
+/*========Checkbox=======*/
+.checkbox {
+	&__box {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 1px solid $gray;
+		flex: 0 0 20px;
+		margin-right: 10px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+	}
+	label {
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	input {
+		display: none;
+		&:checked + label {
+			.checkbox__box {
+				background: url("../images/checkbox.svg") center no-repeat, $red;
+				border-color: $red;
+			}
+		}
+	}
+}
+/*========/checkbox=======*/
+
+/*======Input-box========*/
+.input-box {
+	position: relative;
+	&__icon {
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		z-index: 1;
+		transform: translateY(-50%);
+		svg {
+			width: 16px;
+			height: 16px;
+			fill: $gray;
+			transition: all .3s linear;
+		}
+	}
+	input {
+		width: 100%;
+		padding: 16px 40px;
+		background-color: $wh;
+		border:1px solid $gray;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		&:focus {
+
+		}
+		&:focus+label, &.active + label  {
+			width: auto;
+			font-size: 12px;
+			top: 0px;
+			left: 10px;
+			color: $bl;
+		}
+	}
+	label {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $gray;
+		line-height: $lh;
+		position: absolute;
+		top: 50%;
+		left: 40px;
+		z-index: 1;
+		transform: translateY(-50%);
+		transition: all .3s linear;
+		padding: 2px 5px;
+		background-color: $wh;
+	}
+	&.active {
+		.input-box__icon {
+			svg {
+				fill: $red;
+			}
+		}
+	}
+	&_necessarily {
+		label {
+			&:after {
+				content: "*";
+				color: $red;
+			}
+		}
+	}
+	&__show {
+		position: absolute;
+		top: 50%;
+		right: 16px;
+		z-index: 1;
+		transform: translateY(-50%);
+		cursor: pointer;
+		svg {
+			width: 15px;
+			height: 15px;
+			fill: $gray;
+			transition: all .2s linear;
+		}
+		&.active {
+			svg {
+				fill: $bl;
+			}
+		}
+	}
+}
+/*======/input-box========*/
+
+/*======Filters======*/
+.filters {
+	&__block {
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: 600;
+		color: $bl;
+		line-height: $lh;
+		margin-bottom: 15px;
+	}
+	&__item {
+		margin-bottom: 12px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.checkbox__description {
+		font-size: 16px;
+	}
+	&__button {
+		margin-bottom: 20px;
+		.btn {
+			width: 100%;
+		}
+	}
+	&__reset {
+		text-align: center;
+		button {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $red;
+			line-height: $lh;
+			text-decoration: underline;
+			transition: all .2s linear;
+			background-color: transparent;
+			&:hover {
+				color: $dred;
+				text-decoration: none;
+			}
+		}
+	}
+}
+/*======/filters======*/
+
+/*=======Tag=========*/
+.tag {
+	label {
+		font-family: $ff;
+		font-size: 15px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		display: inline-block;
+		padding: 9px 17px;
+		border: 1px solid $gray;
+		background-color: $gray2;
+		transition: all .2s linear;
+		cursor: pointer;
+	}
+	input {
+		display: none;
+		&:checked + label {
+			color: $red;
+			border-color: $red;
+		}
+		&:disabled + label {
+			color: $gray;
+			border-color: $gray;
+		}
+	}
+	&_uppercase {
+		text-transform: uppercase;
+	}
+}
+/*=======/tag=========*/
+
+/*======Login-form=========*/
+.login-form {
+	max-width: 558px;
+	margin: 0 auto;
+	.title {
+		margin-bottom: 24px;
+		text-align: center;
+	}
+	&__item {
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: $lh;
+		color: $bl;
+		text-align: center;
+		margin-bottom: 40px;
+		&_small {
+			font-size: 14px;
+		}
+		a {
+			color: $red;
+			font-weight: 600;
+			transition: all .2s linear;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.checkbox {
+			margin-right: 15px;
+		}
+	}
+	&__forgot {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $red;
+		line-height: $lh;
+		transition: all .2s linear;
+		&:hover {
+			color: $dred;
+		}
+	}
+	&__noaccnt {
+		display: flex;
+		align-items: center;
+		span {
+			display: inline-block;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $bl;
+			line-height: $lh;
+			margin-right: 24px;
+		}
+	}
+	&__block {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.login-form__row {
+			width: 100%;
+		}
+	}
+	.popup__title {
+		margin-bottom: 15px;
+	}
+}
+/*======/login-form=========*/
+
+/*==========Adaptive=========*/
+@media(max-width: 860px) {
+	.login-form {
+		.title {
+			margin-bottom: 10px;
+		}
+		&__description {
+			margin-bottom: 20px;
+		}
+	}
+}
+@media(max-width: 546px) {
+	.tag {
+		label {
+			font-size: 14px;
+			padding: 10px 15px;
+		}
+		&_uppercase {
+			label {
+				font-size: 12px;
+			}
+		}
+	}
+	.login-form {
+		&__item {
+			margin-bottom: 15px;
+		}
+		&__row {
+			&_wrap {
+				flex-wrap: wrap;
+				.checkbox {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+		&__block {
+			margin-top: 0;
+			.btn {
+				order: -1;
+				width: 100%;
+				margin-bottom: 15px;
+				&-transparent {
+					width: 100%;
+				}
+			}
+			.login-form__noaccnt {
+				width: 100%;
+				flex-direction: column;
+				span {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+/*==========/adaptive=========*/
