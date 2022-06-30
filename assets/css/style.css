@@ -500,6 +500,7 @@
   .footer-subscription input {
     width: 100%;
     background-color: #fff;
+    border-radius: 0;
     padding: 13px 15px;
     font-family: "Futura PT", sans-serif;
     font-size: 14px;
@@ -1424,7 +1425,8 @@
     transform: translate3d(-50%, 0, 0);
     padding-bottom: 0; }
   .popup-size__box {
-    min-height: 100vh; }
+    min-height: 100vh;
+    padding: 24px 10px 100px; }
   .popup-size__title {
     font-size: 24px;
     margin-bottom: 20px; }
@@ -1449,7 +1451,7 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      max-width: 180px;
+      max-width: 185px;
       margin: 0 auto 15px; }
       .size-table-mobile__item:last-child {
         margin-bottom: 0; }
