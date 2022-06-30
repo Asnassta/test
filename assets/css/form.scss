@@ -60,9 +60,7 @@
 		font-weight: 400;
 		color: $bl;
 		line-height: $lh;
-		&:focus {
-
-		}
+		border-radius: 0;
 		&:focus+label, &.active + label  {
 			width: auto;
 			font-size: 12px;

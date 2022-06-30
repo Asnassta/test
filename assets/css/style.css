@@ -905,7 +905,8 @@
     font-size: 14px;
     font-weight: 400;
     color: #394045;
-    line-height: 1.28; }
+    line-height: 1.28;
+    border-radius: 0; }
     .input-box input:focus + label, .input-box input.active + label {
       width: auto;
       font-size: 12px;
