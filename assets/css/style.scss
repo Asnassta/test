@@ -57,6 +57,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	margin: 0 auto;
 }
 
+.sprite {
+	display: none;
+}
+
 .title {
 	font-family: $ff;
 	font-size: 36px;
@@ -73,6 +77,27 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 	&_min {
 		font-size: 28px;
+	}
+}
+
+.subtitle {
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: 400;
+	color: $bl;
+	line-height: $lh;
+	margin: 24px 0 40px;
+	a {
+		color: $red;
+		font-weight: 600;
+		text-decoration: underline;
+		transition: all .2s linear;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&_center {
+		text-align: center;
 	}
 }
 
@@ -130,11 +155,29 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		transition: all .2s linear;
 		text-align: center;
 		&_big {
+			padding: 15px;
 			font-size: 16px;
 		}
 		&:hover {
 			color: $wh;
 			background-color: $dred;
+		}
+	}
+	&-gray {
+		display: inline-block;
+		padding: 15px;
+		background-color: $gray2;
+		border: 1px solid $lgray;
+		text-align: center;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		transition: all .2s linear;
+		&:hover {
+			border-color: $red;
+			color: $red;
 		}
 	}
 	&-box {
@@ -1055,6 +1098,9 @@ body {
 	}
 }
 @media(max-width: 860px) {
+	.subtitle {
+		margin: 10px 0 20px;
+	}
 	.section {
 		margin-bottom: 70px;
 	}

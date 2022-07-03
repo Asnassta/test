@@ -18,6 +18,9 @@
 	&__about {
 		width: 52%;
 		padding-left: 24px;
+		.product-price {
+			min-width: 124px;
+		}
 	}
 	&-info {
 		.tabs-nav {
@@ -207,6 +210,7 @@
 	}
 	.btn-transparent {
 		font-size: 16px;
+		padding: 15px;
 	}
 	&__text {
 		font-family: $ff;
@@ -232,6 +236,51 @@
 			margin-right: 24px;
 			&:last-child {
 				margin-right: 0;
+			}
+		}
+	}
+	&-preview {
+		display: flex;
+		&__photo {
+			display: block;
+			flex: 0 0 70px;
+			img {
+				width: 70px;
+				height: 70px;
+				object-fit: cover;
+			}
+		}
+		&__info {
+			width: calc(100% - 70px);
+			padding-left: 15px;
+		}
+		&__name {
+			font-family: $ff;
+			font-size: 12px;
+			font-weight: 600;
+			color: $bl;
+			line-height: $lh;
+			margin-bottom: 3px;
+		}
+		&__data {
+			margin-bottom: 3px;
+			span {
+				font-family: $ff;
+				font-size: 10px;
+				font-weight: 400;
+				color: $bl;
+				line-height: $lh;
+				&:first-child {
+					color: $gray;
+				}
+			}
+		}
+		.product-price {
+			&__actual {
+				font-size: 12px;
+			}
+			&__past {
+				font-size: 10px;
 			}
 		}
 	}

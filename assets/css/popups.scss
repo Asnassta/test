@@ -249,6 +249,45 @@
 }
 /*========/popup-login============*/
 
+/*============Popup-added==========*/
+.popup-added {
+	.popup__title {
+		margin: 0 auto 30px;
+		max-width: 260px;
+	}
+	&__inner {
+		max-width: 414px;
+ 	}
+ 	&__box {
+ 		padding: 40px;
+ 	}
+ 	&__close {
+ 		top: 15px;
+ 		right: 15px;
+ 	}
+ 	.product-preview {
+ 		margin-bottom: 30px;
+ 	}
+ 	&__buttons {
+ 		>div {
+ 			margin-bottom: 20px;
+ 			display: flex;
+ 			>a {
+ 				width: calc(50% - 10px);
+ 				margin-right: 20px;
+ 				padding: 12px;
+ 				&:last-child {
+ 					margin-right: 0;
+ 				}
+ 			}
+ 		}
+ 		>a {
+ 			width: 100%;
+ 		}
+ 	}
+}
+/*========/popup-added============*/
+
 
 /*========Adaptive========*/
 @media(max-width: 767px) {
@@ -365,6 +404,20 @@
 	 		margin: 0 auto 20px;
 	 	}
 	}
+	.popup-added {
+		.product-preview {
+			padding: 0 10px;
+		}
+		&__buttons {
+			>div {
+				margin-bottom: 10px;
+				>a {
+					width: calc(50% - 5px);
+					margin-right: 10px;
+				}
+			}
+		}
+	}
 }
 @media(max-width: 360px) {
 	.popup-buy  {
@@ -378,6 +431,11 @@
 		}
 		.btn-transparent {
 			font-size: 12px;
+		}
+	}
+	.popup-added {
+		.product-preview {
+			padding: 0;
 		}
 	}
 }
