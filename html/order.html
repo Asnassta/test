@@ -7,12 +7,13 @@
 	<link rel="preload" href="../assets/fonts/FuturaPT-Medium.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="../assets/fonts/FuturaPT-Demi.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="../assets/css/slick.css">
+	<link rel="stylesheet" href="../assets/css/jquery.formstyler.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<title>СайлиД</title>
 </head>
 <body>
 
-	<div class="wrapper page page_authorization">
+	<div class="wrapper page page_order">
 		<header class="header">
 			<nav class="header__nav nav">
 				<div class="container">
@@ -451,62 +452,282 @@
 				<div class="container">
 					<div class="breadcrumbs">
 						<a href="index.html" class="breadcrumbs__item">Главная</a>
-						<a href="#" class="breadcrumbs__item active">Авторизация</a>
+						<a href="#" class="breadcrumbs__item">Корзина</a>
+						<a href="#" class="breadcrumbs__item active">Оформление заказа</a>
 					</div><!--/breadcrumbs-->
 				</div>
 			</div><!--/page__header-->
-			<section class="registration section">
+			<section class="order section">
 				<div class="container">
-					<form action="#" class="login-form">
-						<h1 class="title">Авторизация на сайте</h1>
-						<div class="login-form__description">Введите Ваш логин и пароль для авторизации на сайте и возможности заказа на сайте</div>
-						<div class="login-form__item">
-							<div class="input-box">
-								<span class="input-box__icon">
-									<svg>
-										<use xlink:href="#user"></use>
-									</svg>
-								</span>
-								<input type="text" id="login_reg">
-								<label for="login_reg">Ваш логин:</label>
-							</div><!--/input-box-->
-						</div><!--/login-form__item-->
-						<div class="login-form__item">
-							<div class="input-box input-box_necessarily input-box_password">
-								<span class="input-box__icon">
-									<svg>
-										<use xlink:href="#lock"></use>
-									</svg>
-								</span>
-								<input type="password" id="password_reg">
-								<label for="password_reg">Ваш пароль</label>
-								<span class="input-box__show">
-									<svg>
-										<use xlink:href="#eye"></use>
-									</svg>
-								</span>
-							</div><!--/input-box-->
-						</div><!--/login-form__item-->
-						<div class="login-form__block">
-							<div class="login-form__row">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox-memory_2">
-									<label for="checkbox-memory_2">
-										<span class="checkbox__box"></span>
-										<span class="checkbox__description">Запомнить меня</span>
-									</label>
-								</div><!--/checkbox-->
-								<a href="#" class="login-form__forgot">Забыли пароль?</a>
-							</div>
-							<button type="submit" class="btn btn_medium">Авторизоваться</button>
-							<div class="login-form__noaccnt">
-								<span>Нет аккаунта?</span>
-								<a href="#" class="btn-transparent btn-transparent_big">Зарегистирироваться</a>
-							</div>
+					<h1 class="title">Оформление заказа</h1>
+					<div class="subtitle">Для возможности заказа товара через сайт вам необходимо <a href="#">Авторизоваться</a>. Если у вас нет аккаунта на нашем сайте, Вам нужно <a href="#">Зарегистрироваться</a></div>
+					<form action="#" class="order__inner">
+						<div class="order__form order-form">
+							<div class="order-form__block">
+								<h2 class="order-form__title">1. Данные получателя</h2>
+								<div class="order-form__box">
+									<div class="order-form__col">
+										<div class="order-form__item">
+											<div class="input-box">
+												<span class="input-box__icon">
+													<svg>
+														<use xlink:href="#user"></use>
+													</svg>
+												</span>
+												<input type="text" id="lastname_order">
+												<label for="lastname_order">Ваша фамилия</label>
+											</div><!--/input-box-->
+										</div><!--/order-form__item-->
+										<div class="order-form__item">
+											<div class="input-box input-box_necessarily">
+												<span class="input-box__icon">
+													<svg>
+														<use xlink:href="#user"></use>
+													</svg>
+												</span>
+												<input type="text" id="name_order">
+												<label for="name_order">Ваше имя</label>
+											</div><!--/input-box-->
+										</div><!--/order-form__item-->
+										<div class="order-form__item">
+											<div class="input-box">
+												<span class="input-box__icon">
+													<svg>
+														<use xlink:href="#user"></use>
+													</svg>
+												</span>
+												<input type="text" id="patronymic_order">
+												<label for="patronymic_order">Ваше отчество</label>
+											</div><!--/input-box-->
+										</div><!--/order-form__item-->
+									</div><!--/order-form__col-->
+									<div class="order-form__col">
+										<div class="order-form__item">
+											<div class="input-box input-box_necessarily">
+												<span class="input-box__icon">
+													<svg>
+														<use xlink:href="#phone"></use>
+													</svg>
+												</span>
+												<input type="text" id="phone_order">
+												<label for="phone_order">Ваш телефон</label>
+											</div><!--/input-box-->
+										</div><!--/order-form__item-->
+										<div class="order-form__item">
+											<div class="input-box">
+												<span class="input-box__icon">
+													<svg>
+														<use xlink:href="#mail"></use>
+													</svg>
+												</span>
+												<input type="email" id="mail_order">
+												<label for="mail_order">Ваш E-mail</label>
+											</div><!--/input-box-->
+										</div><!--/order-form__item-->
+									</div><!--/order-form__col-->
+								</div>
+							</div><!--/order-form__block-->
+							<div class="order-form__block">
+								<h2 class="order-form__title">2. Где и как вы хотите получить заказ</h2>
+								<div class="order-form__tabs-nav">
+									<div class="tabs-nav">
+										<a href="#" onclick="javascript:tabs(1);return false;" class="t1 active">Самовывоз с нашего склада</a>
+										<a href="#" onclick="javascript:tabs(2);return false;"  class="t2">Курьерская доставка</a>
+									</div>
+								</div>
+								<div class="order-form__tabs">
+									<div class="tabs-block tab_1">
+										<div class="order-form__subtitle">Выберете пункт самовывоза:</div>
+										<div class="order-form__checkbox pickup-box">
+											<input type="checkbox" name="pickup" id="pickup">
+											<label for="pickup">
+												<span class="pickup-box__block">
+													<span class="pickup-box__checkbox"></span>
+													<span class="pickup-box__info">
+														<span class="pickup-box__info_name">Центральный склад "Ожерелки"</span>
+														<span class="pickup-box__info_address">г. Москва, ул. Название улицы, оф. 123</span>
+													</span>
+												</span>
+												<span class="pickup-box__price">Бесплатно</span>
+											</label>
+										</div>
+									</div><!--/tabs-block -->
+									<div class="tabs-block tab_2">
+										<div class="order-form__subtitle">Укажите адрес для курьерской доставки:</div>
+										<div class="order-form__box">
+											<div class="order-form__col">
+												<div class="order-form__item order-form__item-select">
+													<div class="select-box">
+														<select id="region">
+															<option value="0">Москва и МО</option>
+															<option value="1">Москва и МО</option>
+															<option value="2">Москва и МО</option>
+															<option value="3">Москва и МО</option>
+														</select>
+														<label for="region">Регион доставки</label>
+													</div>
+												</div><!--/order-form__item-->
+												<div class="order-form__item order-form__item-select">
+													<div class="select-box">
+														<select id="sity_order">
+															<option value="0">Москва</option>
+															<option value="1">Москва</option>
+															<option value="2">Москва</option>
+															<option value="3">Москва</option>
+														</select>
+														<label for="sity_order">Город доставки</label>
+													</div>
+												</div><!--/order-form__item-->
+											</div><!--/order-form__col-->
+											<div class="order-form__col">
+												<div class="order-form__item">
+													<div class="input-box input-box_necessarily input-box_no-icon">
+														<input type="email" id="street_order">
+														<label for="street_order">Улица</label>
+													</div><!--/input-box-->
+												</div><!--/order-form__item-->
+												<div class="order-form__item order-form__item-row">
+													<div class="order-form__item-half">
+														<div class="input-box input-box_necessarily input-box_no-icon">
+															<input type="email" id="home_order">
+															<label for="home_order">Дом</label>
+														</div><!--/input-box-->
+													</div>
+													<div class="order-form__item-half">
+														<div class="input-box input-box_necessarily input-box_no-icon">
+															<input type="email" id="apartment_order">
+															<label for="apartment_order">Квартира</label>
+														</div><!--/input-box-->
+													</div>
+												</div><!--/order-form__item-->
+											</div><!--/order-form__col-->
+										</div>
+									</div><!--/tabs-block -->
+								</div>
+							</div><!--/order-form__block-->
+							<div class="order-form__block">
+								<h2 class="order-form__title">3. Как вам удобнее оплатить заказ</h2>
+								<div class="order-form__pay-box">
+									<div class="order-form__pay-item">
+										<input type="radio" name="pay-box" id="pay-box_1" checked>
+										<label for="pay-box_1">Платежная квитанция</label>
+									</div>
+									<div class="order-form__pay-item">
+										<input type="radio" name="pay-box" id="pay-box_2">
+										<label for="pay-box_2">Оплата при получении</label>
+									</div>
+									<div class="order-form__pay-item">
+										<input type="radio" name="pay-box" id="pay-box_3">
+										<label for="pay-box_3">Банковская карта</label>
+									</div>
+								</div><!--/order-form__pay-box-->
+							</div><!--/order-form__block-->
+							<div class="order-form__block">
+								<h2 class="order-form__title">4. Комментарий к заказу</h2>
+								<div class="order-form__item">
+									<div class="textarea-box">
+										<textarea></textarea>
+									</div>
+								</div>
+							</div><!--/order-form__block-->
+						</div><!--/order-form-->
+						<div class="order__sidebar">
+							<div class="order-box">
+								<div class="order-box__header">
+									<h4 class="order-box__title">Ваш заказ:</h4>
+									<a href="#" class="order-box__link">Изменить заказ</a>
+								</div>
+								<div class="order-box__item">
+									<a href="#" class="order-box__photo">
+										<img src="../assets/images/bed.png" alt="">
+									</a>
+									<div class="order-box__info">
+										<a href="#" class="order-box__name">Постель сатиновая, Сайлид</a>
+										<div class="order-box__data">
+											<span>Артикул:</span>
+											<span>1234</span>
+										</div>
+										<div class="order-box__data">
+											<span>Размер:</span>
+											<span>Полуторное</span>
+										</div>
+										<div class="order-box__price product-price">
+											<span class="product-price__actual">3280 ₽</span>
+											<span class="product-price__past">3280 ₽</span>
+										</div>
+									</div>
+								</div><!--/order-box__item-->
+								<div class="order-box__item">
+									<a href="#" class="order-box__photo">
+										<img src="../assets/images/bed.png" alt="">
+									</a>
+									<div class="order-box__info">
+										<a href="#" class="order-box__name">Постель сатиновая, Сайлид</a>
+										<div class="order-box__data">
+											<span>Артикул:</span>
+											<span>1234</span>
+										</div>
+										<div class="order-box__data">
+											<span>Размер:</span>
+											<span>Полуторное</span>
+										</div>
+										<div class="order-box__price product-price">
+											<span class="product-price__actual">3280 ₽</span>
+											<span class="product-price__past">3280 ₽</span>
+										</div>
+									</div>
+								</div><!--/order-box__item-->
+								<div class="order-box__item">
+									<a href="#" class="order-box__photo">
+										<img src="../assets/images/bed.png" alt="">
+									</a>
+									<div class="order-box__info">
+										<a href="#" class="order-box__name">Постель сатиновая, Сайлид</a>
+										<div class="order-box__data">
+											<span>Артикул:</span>
+											<span>1234</span>
+										</div>
+										<div class="order-box__data">
+											<span>Размер:</span>
+											<span>Полуторное</span>
+										</div>
+										<div class="order-box__price product-price">
+											<span class="product-price__actual">3280 ₽</span>
+											<span class="product-price__past">3280 ₽</span>
+										</div>
+									</div>
+								</div><!--/order-box__item-->
+								<div class="order-box__block">
+									<div class="order-box__delivery">
+										<span>Самовывоз со склада: </span>
+										<span class="order-box__delivery-price">0 ₽</span>
+									</div>
+								</div>
+								<div class="order-box__block">
+									<div class="order-box__pay">
+										<div class="order-box__pay-price">
+											<span>Стоимость:</span>
+											<span>10 200 ₽</span>
+										</div>
+										<div class="order-box__pay-discount">
+											<span>Скидка:</span>
+											<span>717 ₽</span>
+										</div>
+										<div class="order-box__pay-sum">
+											<span>Итого со скидкой:</span>
+											<span>10 917 ₽</span>
+										</div>
+									</div>
+								</div>
+							</div><!--/order-box-->
+						</div><!--/order__sidebar-->
+						<div class="order__buttons">
+							<a href="#" class="btn-transparent btn-transparent_big">Вернутся к покупкам</a>
+							<button type="submit" class="btn btn_medium">Оформить заказ</button>
 						</div>
 					</form>
 				</div>
-			</section>
+			</section><!--/order-->
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -634,7 +855,6 @@
 		</footer><!--/footer-->
 	</div>
 
-
 	<div class="popup popup-login popup-entrance">
 		<div class="closex"></div>
 		<div class="popup__inner popup-login__inner">
@@ -695,6 +915,49 @@
             </div>
 		</div>
 	</div><!--/popup-entrance-->
+
+	<div class="popup popup-login popup-fast">
+		<div class="closex"></div>
+		<div class="popup__inner popup-login__inner">
+			<div class="popup__box popup-login__box">
+				<span class="popup__close popup-login__close">
+					<svg class="close-icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</span>
+				<div class="popup-login__content">
+					<form action="#" class="login-form">
+						<h3 class="title title_min popup__title">Быстрый заказ</h3>
+						<div class="login-form__description login-form__description_small">Оставьте заявку и менеджер свяжется с Вами для уточнения деталей заказа</div>
+						<div class="login-form__item">
+							<div class="input-box">
+								<span class="input-box__icon">
+									<svg>
+										<use xlink:href="#user"></use>
+									</svg>
+								</span>
+								<input type="text" id="name">
+								<label for="name">Ваше имя:</label>
+							</div><!--/input-box-->
+						</div><!--/login-form__item-->
+						<div class="login-form__item">
+							<div class="input-box input-box_necessarily">
+								<span class="input-box__icon">
+									<svg>
+										<use xlink:href="#phone"></use>
+									</svg>
+								</span>
+								<input type="text" id="phone-input">
+								<label for="phone-input">Ваш телефон</label>
+							</div><!--/input-box-->
+						</div><!--/login-form__item-->
+						<button type="submit" class="btn btn_medium">Оставить заявку</button>
+					</form>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-fast-->
+
 
 	<!--Sprite-->
 	<svg class="sprite">
@@ -797,9 +1060,18 @@
 		</symbol>
 	</svg>
 
-
 	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/jquery.formstyler.min.js"></script>
 	<script src="../assets/js/slick.min.js"></script>
 	<script src="../assets/js/script.js"></script>
+	<script>
+		/*======Select-styler=============*/
+		$(document).ready(function() {
+  			$(function() {
+  			  $('select').styler();
+  			});
+  		});
+  		/*======/select-styler=============*/
+	</script>
 </body>
 </html>

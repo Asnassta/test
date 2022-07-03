@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<div class="wrapper page page_authorization">
+	<div class="wrapper page page_contact">
 		<header class="header">
 			<nav class="header__nav nav">
 				<div class="container">
@@ -451,62 +451,69 @@
 				<div class="container">
 					<div class="breadcrumbs">
 						<a href="index.html" class="breadcrumbs__item">Главная</a>
-						<a href="#" class="breadcrumbs__item active">Авторизация</a>
+						<a href="#" class="breadcrumbs__item active">Контакты</a>
 					</div><!--/breadcrumbs-->
 				</div>
 			</div><!--/page__header-->
-			<section class="registration section">
+			<section class="contact section">
 				<div class="container">
-					<form action="#" class="login-form">
-						<h1 class="title">Авторизация на сайте</h1>
-						<div class="login-form__description">Введите Ваш логин и пароль для авторизации на сайте и возможности заказа на сайте</div>
-						<div class="login-form__item">
-							<div class="input-box">
-								<span class="input-box__icon">
-									<svg>
-										<use xlink:href="#user"></use>
-									</svg>
-								</span>
-								<input type="text" id="login_reg">
-								<label for="login_reg">Ваш логин:</label>
-							</div><!--/input-box-->
-						</div><!--/login-form__item-->
-						<div class="login-form__item">
-							<div class="input-box input-box_necessarily input-box_password">
-								<span class="input-box__icon">
-									<svg>
-										<use xlink:href="#lock"></use>
-									</svg>
-								</span>
-								<input type="password" id="password_reg">
-								<label for="password_reg">Ваш пароль</label>
-								<span class="input-box__show">
-									<svg>
-										<use xlink:href="#eye"></use>
-									</svg>
-								</span>
-							</div><!--/input-box-->
-						</div><!--/login-form__item-->
-						<div class="login-form__block">
-							<div class="login-form__row">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox-memory_2">
-									<label for="checkbox-memory_2">
-										<span class="checkbox__box"></span>
-										<span class="checkbox__description">Запомнить меня</span>
-									</label>
-								</div><!--/checkbox-->
-								<a href="#" class="login-form__forgot">Забыли пароль?</a>
-							</div>
-							<button type="submit" class="btn btn_medium">Авторизоваться</button>
-							<div class="login-form__noaccnt">
-								<span>Нет аккаунта?</span>
-								<a href="#" class="btn-transparent btn-transparent_big">Зарегистирироваться</a>
-							</div>
+					<h1 class="title">Контакты</h1>
+					<div class="contact__inner">
+						<div class="contact__data">
+							<ul>
+								<li>
+									<a href="https://textiloptom.net/" class="contact__item" target="blank">
+										<div class="contact__icon">
+											<img src="../assets/images/web.svg" alt="">
+										</div>
+										<div class="contact__info">www.textiloptom.net</div>
+									</a>
+								</li>
+								<li>
+									<a href="tel:+74993912194" class="contact__item">
+										<div class="contact__icon">
+											<img src="../assets/images/phone.svg" alt="">
+										</div>
+										<div class="contact__info">+7 (499) 391-21-94</div>
+									</a>
+								</li>
+								<li>
+									<div class="contact__item">
+										<div class="contact__icon">
+											<img src="../assets/images/clock.svg" alt="">
+										</div>
+										<div class="contact__info">Пн-Пт с 9.00-17.00</div>
+									</div>
+								</li>
+								<li>
+									<div class="contact__item">
+										<div class="contact__icon">
+											<img src="../assets/images/pin.svg" alt="">
+										</div>
+										<div class="contact__info">
+											<span>Офис, Мелкооптовый склад, Москва, МКАД 104км. д.8а</span>
+											<span>Центральный склад "Ожерелки"</span>
+											<span>Иваново ТЦ "Рио"</span>
+											<span>Склад Екатеринбург</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="mailto:info@sailid.ru" class="contact__item">
+										<div class="contact__icon">
+											<img src="../assets/images/mail.svg" alt="">
+										</div>
+										<div class="contact__info">info@sailid.ru</div>
+									</a>
+								</li>
+							</ul>
 						</div>
-					</form>
+						<div class="contact__map">
+							<img src="../assets/images/map.png" alt="">
+						</div>
+					</div>
 				</div>
-			</section>
+			</section><!--/contact-->
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -634,7 +641,6 @@
 		</footer><!--/footer-->
 	</div>
 
-
 	<div class="popup popup-login popup-entrance">
 		<div class="closex"></div>
 		<div class="popup__inner popup-login__inner">
@@ -695,6 +701,49 @@
             </div>
 		</div>
 	</div><!--/popup-entrance-->
+
+	<div class="popup popup-login popup-fast">
+		<div class="closex"></div>
+		<div class="popup__inner popup-login__inner">
+			<div class="popup__box popup-login__box">
+				<span class="popup__close popup-login__close">
+					<svg class="close-icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</span>
+				<div class="popup-login__content">
+					<form action="#" class="login-form">
+						<h3 class="title title_min popup__title">Быстрый заказ</h3>
+						<div class="login-form__description login-form__description_small">Оставьте заявку и менеджер свяжется с Вами для уточнения деталей заказа</div>
+						<div class="login-form__item">
+							<div class="input-box">
+								<span class="input-box__icon">
+									<svg>
+										<use xlink:href="#user"></use>
+									</svg>
+								</span>
+								<input type="text" id="name">
+								<label for="name">Ваше имя:</label>
+							</div><!--/input-box-->
+						</div><!--/login-form__item-->
+						<div class="login-form__item">
+							<div class="input-box input-box_necessarily">
+								<span class="input-box__icon">
+									<svg>
+										<use xlink:href="#phone"></use>
+									</svg>
+								</span>
+								<input type="text" id="phone-input">
+								<label for="phone-input">Ваш телефон</label>
+							</div><!--/input-box-->
+						</div><!--/login-form__item-->
+						<button type="submit" class="btn btn_medium">Оставить заявку</button>
+					</form>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-fast-->
+
 
 	<!--Sprite-->
 	<svg class="sprite">
@@ -796,7 +845,6 @@
 			</g>
 		</symbol>
 	</svg>
-
 
 	<script src="../assets/js/jquery-3.6.0.min.js"></script>
 	<script src="../assets/js/slick.min.js"></script>

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<div class="wrapper page page_authorization">
+	<div class="wrapper page page_shopping-cart">
 		<header class="header">
 			<nav class="header__nav nav">
 				<div class="container">
@@ -451,62 +451,262 @@
 				<div class="container">
 					<div class="breadcrumbs">
 						<a href="index.html" class="breadcrumbs__item">Главная</a>
-						<a href="#" class="breadcrumbs__item active">Авторизация</a>
+						<a href="#" class="breadcrumbs__item active">Корзина</a>
 					</div><!--/breadcrumbs-->
 				</div>
 			</div><!--/page__header-->
-			<section class="registration section">
+			<section class="shopping section">
 				<div class="container">
-					<form action="#" class="login-form">
-						<h1 class="title">Авторизация на сайте</h1>
-						<div class="login-form__description">Введите Ваш логин и пароль для авторизации на сайте и возможности заказа на сайте</div>
-						<div class="login-form__item">
-							<div class="input-box">
-								<span class="input-box__icon">
-									<svg>
-										<use xlink:href="#user"></use>
-									</svg>
-								</span>
-								<input type="text" id="login_reg">
-								<label for="login_reg">Ваш логин:</label>
-							</div><!--/input-box-->
-						</div><!--/login-form__item-->
-						<div class="login-form__item">
-							<div class="input-box input-box_necessarily input-box_password">
-								<span class="input-box__icon">
-									<svg>
-										<use xlink:href="#lock"></use>
-									</svg>
-								</span>
-								<input type="password" id="password_reg">
-								<label for="password_reg">Ваш пароль</label>
-								<span class="input-box__show">
-									<svg>
-										<use xlink:href="#eye"></use>
-									</svg>
-								</span>
-							</div><!--/input-box-->
-						</div><!--/login-form__item-->
-						<div class="login-form__block">
-							<div class="login-form__row">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox-memory_2">
-									<label for="checkbox-memory_2">
-										<span class="checkbox__box"></span>
-										<span class="checkbox__description">Запомнить меня</span>
-									</label>
-								</div><!--/checkbox-->
-								<a href="#" class="login-form__forgot">Забыли пароль?</a>
+					<h1 class="title">Корзина товаров</h1>
+					<div class="subtitle">Для возможности заказа товара через сайт вам необходимо <a href="#">Авторизоваться</a>. Если у вас нет аккаунта на нашем сайте, Вам нужно <a href="#">Зарегистрироваться</a></div>
+					<div class="shopping-box">
+						<div class="shopping-box__header shopping-box__row">
+							<div class="shopping-box__col">
+								<div class="shopping-box__item">Фото</div>
+							</div><!--/shopping-box__col-->
+							<div class="shopping-box__col">
+								<div class="shopping-box__item">Товар</div>
+								<div class="shopping-box__item">Артикул:</div>
+							</div><!--/shopping-box__col-->
+							<div class="shopping-box__col">
+								<div class="shopping-box__item">Количество:</div>
+								<div class="shopping-box__item">Цена, руб:</div>
+								<div class="shopping-box__item">Сумма, руб:</div>
+							</div><!--/shopping-box__col-->
+							<div class="shopping-box__col">
+								<div class="shopping-box__item"></div>
+							</div><!--/shopping-box__col-->
+						</div><!--/shopping-box__header-->
+						<div class="shopping-box__content">
+							<div class="shopping-box__product shopping-box__row">
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__photo">
+											<img src="../assets/images/bed.png" alt="">
+										</a>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__name">Постель сатиновая</a>
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__data">
+											<span class="shopping-box__data_name">Артикул:</span>
+											<span>5875</span>
+										</div>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<div class="product-quantity">
+											<a href="#" class="product-quantity__btn product-quantity__minus">
+												<svg>
+													<use xlink:href="#minus-icon"></use>
+												</svg>
+											</a>
+											<input type="text" value="1">
+											<a href="#" class="product-quantity__btn product-quantity__plus">
+												<svg>
+													<use xlink:href="#plus-icon"></use>
+												</svg>
+											</a>
+										</div><!--/product-quantity-->
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__price">
+											<span class="shopping-box__price-one">3280 </span> 
+											<span>₽/шт</span>
+										</div>
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__sum">
+											<div class="product-price">
+												<span class="product-price__actual">
+													<span class="new_price">3280</span> ₽
+												</span>
+												<span class="product-price__past">
+													<span class="old_price">6480</span> ₽
+												</span>
+											</div>
+										</div>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__delete">
+											<svg>
+												<use xlink:href="#delete"></use>
+											</svg>
+											<span>Удалить товар</span>
+										</a>
+									</div>
+								</div><!--/shopping-box__col-->
+							</div><!--/shopping-box__product-->
+							<div class="shopping-box__product shopping-box__row">
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__photo">
+											<img src="../assets/images/bed.png" alt="">
+										</a>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__name">Постель сатиновая</a>
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__data">
+											<span class="shopping-box__data_name">Артикул:</span>
+											<span>5875</span>
+										</div>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<div class="product-quantity">
+											<a href="#" class="product-quantity__btn product-quantity__minus">
+												<svg>
+													<use xlink:href="#minus-icon"></use>
+												</svg>
+											</a>
+											<input type="text" value="1">
+											<a href="#" class="product-quantity__btn product-quantity__plus">
+												<svg>
+													<use xlink:href="#plus-icon"></use>
+												</svg>
+											</a>
+										</div><!--/product-quantity-->
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__price">
+											<span class="shopping-box__price-one">3280 </span> 
+											<span>₽/шт</span>
+										</div>
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__sum">
+											<div class="product-price">
+												<span class="product-price__actual">
+													<span class="new_price">3280</span> ₽
+												</span>
+												<span class="product-price__past">
+													<span class="old_price">6480</span> ₽
+												</span>
+											</div>
+										</div>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__delete">
+											<svg>
+												<use xlink:href="#delete"></use>
+											</svg>
+											<span>Удалить товар</span>
+										</a>
+									</div>
+								</div><!--/shopping-box__col-->
+							</div><!--/shopping-box__product-->
+							<div class="shopping-box__product shopping-box__row">
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__photo">
+											<img src="../assets/images/bed.png" alt="">
+										</a>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__name">Постель сатиновая</a>
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__data">
+											<span class="shopping-box__data_name">Артикул:</span>
+											<span>5875</span>
+										</div>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<div class="product-quantity">
+											<a href="#" class="product-quantity__btn product-quantity__minus">
+												<svg>
+													<use xlink:href="#minus-icon"></use>
+												</svg>
+											</a>
+											<input type="text" value="1">
+											<a href="#" class="product-quantity__btn product-quantity__plus">
+												<svg>
+													<use xlink:href="#plus-icon"></use>
+												</svg>
+											</a>
+										</div><!--/product-quantity-->
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__price">
+											<span class="shopping-box__price-one">3280 </span> 
+											<span>₽/шт</span>
+										</div>
+									</div>
+									<div class="shopping-box__item">
+										<div class="shopping-box__sum">
+											<div class="product-price">
+												<span class="product-price__actual">
+													<span class="new_price">3280</span> ₽
+												</span>
+												<span class="product-price__past">
+													<span class="old_price">6480</span> ₽
+												</span>
+											</div>
+										</div>
+									</div>
+								</div><!--/shopping-box__col-->
+								<div class="shopping-box__col">
+									<div class="shopping-box__item">
+										<a href="#" class="shopping-box__delete">
+											<svg>
+												<use xlink:href="#delete"></use>
+											</svg>
+											<span>Удалить товар</span>
+										</a>
+									</div>
+								</div><!--/shopping-box__col-->
+							</div><!--/shopping-box__product-->
+						</div><!--/shopping-box__content-->
+						<div class="shopping-box__footer">
+							<div class="shopping-box__info">
+								<div class="shopping-box__weight">
+									<span>Общий вес: </span>
+									<span>1390 гр</span>
+								</div>
+								<div class="shopping-box__description">Вес указан приблизительно и может колебаться в большую или меньшую сторону</div>
 							</div>
-							<button type="submit" class="btn btn_medium">Авторизоваться</button>
-							<div class="login-form__noaccnt">
-								<span>Нет аккаунта?</span>
-								<a href="#" class="btn-transparent btn-transparent_big">Зарегистирироваться</a>
+							<div class="shopping-box__pay">
+								<div class="shopping-box__pay-price">
+									<span>Стоимость:</span>
+									<span>10 200 ₽</span>
+								</div>
+								<div class="shopping-box__pay-discount">
+									<span>Скидка:</span>
+									<span>717 ₽</span>
+								</div>
+								<div class="shopping-box__pay-sum">
+									<span>Итого со скидкой:</span>
+									<span>10 917 ₽</span>
+								</div>
 							</div>
 						</div>
-					</form>
+					</div><!--/shopping-box-->
+					<div class="shopping__buttons">
+						<a href="#" class="btn btn_medium">Вернуться к покупкам</a>
+						<div>
+							<a href="#" class="btn-transparent btn-transparent_big btn-fast">Быстрый заказ</a>
+							<a href="#" class="btn btn_medium">Оформить заказ</a>
+						</div>
+					</div>
 				</div>
-			</section>
+			</section><!--/shopping-->
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -634,7 +834,6 @@
 		</footer><!--/footer-->
 	</div>
 
-
 	<div class="popup popup-login popup-entrance">
 		<div class="closex"></div>
 		<div class="popup__inner popup-login__inner">
@@ -695,6 +894,49 @@
             </div>
 		</div>
 	</div><!--/popup-entrance-->
+
+	<div class="popup popup-login popup-fast">
+		<div class="closex"></div>
+		<div class="popup__inner popup-login__inner">
+			<div class="popup__box popup-login__box">
+				<span class="popup__close popup-login__close">
+					<svg class="close-icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</span>
+				<div class="popup-login__content">
+					<form action="#" class="login-form">
+						<h3 class="title title_min popup__title">Быстрый заказ</h3>
+						<div class="login-form__description login-form__description_small">Оставьте заявку и менеджер свяжется с Вами для уточнения деталей заказа</div>
+						<div class="login-form__item">
+							<div class="input-box">
+								<span class="input-box__icon">
+									<svg>
+										<use xlink:href="#user"></use>
+									</svg>
+								</span>
+								<input type="text" id="name">
+								<label for="name">Ваше имя:</label>
+							</div><!--/input-box-->
+						</div><!--/login-form__item-->
+						<div class="login-form__item">
+							<div class="input-box input-box_necessarily">
+								<span class="input-box__icon">
+									<svg>
+										<use xlink:href="#phone"></use>
+									</svg>
+								</span>
+								<input type="text" id="phone-input">
+								<label for="phone-input">Ваш телефон</label>
+							</div><!--/input-box-->
+						</div><!--/login-form__item-->
+						<button type="submit" class="btn btn_medium">Оставить заявку</button>
+					</form>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-fast-->
+
 
 	<!--Sprite-->
 	<svg class="sprite">
@@ -796,7 +1038,6 @@
 			</g>
 		</symbol>
 	</svg>
-
 
 	<script src="../assets/js/jquery-3.6.0.min.js"></script>
 	<script src="../assets/js/slick.min.js"></script>
